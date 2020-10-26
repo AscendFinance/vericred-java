@@ -222,6 +222,8 @@ space                     ::= /[ \t]/+
 package model;
 
 import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
@@ -234,6 +236,7 @@ import java.io.Serializable;
 /**
  * RequestProvidersSearch
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-02T17:06:11.296-04:00")
 public class RequestProvidersSearch  implements Serializable {
   @JsonProperty("accepts_insurance")
